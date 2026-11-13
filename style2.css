@@ -1,74 +1,137 @@
-/* Reset e Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
 body {
+    width: 100%;
+    min-height: 100%;
+
     font-family: 'Inter', sans-serif;
-    background-color: #121212;
+
+    background-color: #ffffff;
     color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 1rem 0;
+
+    overflow-x: hidden;
 }
 
-/* Moldura do site */
+body {
+    min-height: 100vh;
+}
+
 .page-container {
     width: 100%;
-    max-width: 650px;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
     background-color: #ffffff;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    max-width: none;
 }
 
-/* Hero Section */
 .hero-section {
     position: relative;
+
     width: 100%;
-    height: 380px;
+    height: 65vh;
+    min-height: 450px;
+
     display: flex;
     flex-direction: column;
+
     justify-content: space-between;
-    padding: 1.25rem 1.5rem 2.5rem 1.5rem;
-    background-color: #1a2332; /* Cor de reserva caso a imagem demore a carregar */
+    align-items: center;
+
+    padding: 2rem 4rem 4rem;
+
+    background-color: #1a2332;
 }
 
-/* Imagem de Fundo do Hero */
 .hero-bg-img {
     position: absolute;
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
+
     z-index: 1;
 }
 
-/* Overlay escuro para destacar o texto */
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.65) 100%);
+
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.65) 100%
+    );
+
     z-index: 2;
 }
 
-/* Topo do Hero (Logo + Contato) */
 .hero-header {
     position: relative;
     z-index: 3;
+
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.back-button {
+    background-color: #5ea3d0;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 9999px;
+
+    padding: 0.65rem 1.3rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    cursor: pointer;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #4b8cb7;
 }
 
 .logo-wrapper {
-    width: 32px;
-    height: 32px;
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 48px;
+    height: 48px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,116 +140,247 @@ body {
 .logo-img {
     max-width: 100%;
     max-height: 100%;
+
     object-fit: contain;
 }
 
 .contact-info {
     color: #ffffff;
-    font-size: 0.65rem;
+
+    font-size: 0.9rem;
     font-weight: 500;
+
     letter-spacing: 0.02em;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
-/* Conteúdo Central do Hero */
 .hero-content {
     position: relative;
     z-index: 3;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: auto;
+
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .hero-title {
     color: #ffffff;
-    font-size: 1.85rem;
+
+    font-size: 3rem;
     font-weight: 700;
+
     line-height: 1.2;
-    margin-bottom: 0.75rem;
+
+    margin-bottom: 1rem;
 }
 
 .hero-subtitle {
     color: #ffffff;
-    font-size: 0.75rem;
+
+    font-size: 1.1rem;
     font-weight: 500;
+
     opacity: 0.9;
     letter-spacing: 0.01em;
 }
 
-/* Seção de Imóveis */
 .properties-section {
-    padding: 2.25rem 1.5rem 2.5rem 1.5rem;
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 4rem 0 5rem;
+
     background-color: #ffffff;
 }
 
 .section-title {
     text-align: center;
-    font-size: 1.15rem;
+
+    font-size: 1.85rem;
     font-weight: 700;
+
     color: #111111;
-    margin-bottom: 1.75rem;
+
+    margin-bottom: 2.75rem;
 }
 
-/* Grid de Cards */
 .properties-grid {
+    width: 100%;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.75rem;
 }
 
 .property-card {
     display: flex;
     flex-direction: column;
+
+    min-width: 0;
+
+    transition: transform 0.2s ease;
 }
 
-/* Box da Imagem com Cantos Arredondados */
+.property-card:hover {
+    transform: translateY(-4px);
+}
+
 .card-image-box {
     width: 100%;
-    height: 250px;
-    border-radius: 1.25rem;
+    height: 480px;
+
+    border-radius: 1.5rem;
     overflow: hidden;
-    background-color: #e5e7eb; /* Cor cinza para visualização caso não tenha imagem */
-    margin-bottom: 0.85rem;
+
+    background-color: #e5e7eb;
+
+    margin-bottom: 1.1rem;
 }
 
 .card-img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+    object-position: center;
+
     display: block;
 }
 
-/* Informações do Imóvel */
 .card-info {
-    padding: 0 0.25rem;
+    padding: 0 0.25rem 0.75rem;
+
     border-bottom: 1px solid #eaeaea;
-    padding-bottom: 0.5rem;
 }
 
 .card-title {
-    font-size: 0.95rem;
+    font-size: 1.25rem;
     font-weight: 700;
+
     color: #111111;
-    margin-bottom: 0.2rem;
+
+    margin-bottom: 0.35rem;
 }
 
 .card-location {
-    font-size: 0.65rem;
+    font-size: 0.9rem;
+
     color: #666666;
     font-weight: 500;
 }
 
-/* Responsividade para Telas Pequenas */
-@media (max-width: 580px) {
-    .properties-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+@media (max-width: 1024px) {
+
+    .hero-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
-    .card-image-box {
-        height: 280px;
+    .properties-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        height: 55vh;
+        min-height: 400px;
+
+        padding: 1.5rem;
+    }
+
+    .hero-header {
+        padding: 0;
+        gap: 0.5rem;
+    }
+
+    .back-button {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.7rem;
+    }
+
+    .logo-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-info {
+        font-size: 0.7rem;
     }
 
     .hero-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .properties-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-image-box {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        min-height: 350px;
+        padding: 1.25rem;
+    }
+
+    .hero-header {
+        gap: 0.3rem;
+    }
+
+    .back-button {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    .logo-wrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .contact-info {
+        font-size: 0.65rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .properties-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .card-image-box {
+        height: 350px;
+    }
+
 }
