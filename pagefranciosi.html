@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartamento estiloso e retrô - Detalhes do Imóvel</title>
+
+  <!-- Fontes e Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="franciosi.css">
+</head>
+
+<body>
+
+  <div class="app-window">
+
+    <!-- HEADER -->
+    <header class="header">
+      <button class="btn-home" onclick="window.history.back();">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+        <span>Voltar</span>
+      </button>
+
+      <div class="search-bar-container">
+        <input type="text" class="search-input" placeholder="Encontre seu lar, com as suas preferências...">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      </div>
+
+      <div class="brand-logo-container">
+        <img src="logo.png" alt="Logo Roomatch" class="brand-logo-img">
+      </div>
+    </header>
+
+    <section class="gallery-section">
+      <div class="gallery-carousel">
+        <div class="gallery-track">
+          <!-- CONJUNTO DE FOTOS ORIGINAIS -->
+          <div class="gallery-card"><img src="ap1.avif" alt="Apartamento - imagem 1"></div>
+          <div class="gallery-card"><img src="ap2.png" alt="Apartamento - imagem 2"></div>
+          <div class="gallery-card"><img src="ap3.png" alt="Apartamento - imagem 3"></div>
+
+          <!-- REPETIÇÃO DAS FOTOS PARA LOOP INFINITO E SUAVE -->
+          <div class="gallery-card"><img src="ap4.avif" alt="Apartamento - imagem 1"></div>
+          <div class="gallery-card"><img src="ap4.jpg" alt="Apartamento - imagem 2"></div>
+          <div class="gallery-card"><img src="ap5.avif" alt="Apartamento - imagem 3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMAÇÕES DO IMÓVEL -->
+    <main class="main-grid">
+
+      <div class="property-info-col">
+
+        <div class="property-header">
+          <div>
+            <h1 class="property-title" id="propTitle">Apartamento estiloso e retrô</h1>
+            <h2 class="property-subtitle" id="propSubtitle">70m²</h2>
+          </div>
+
+          <div class="rating-badge">
+            <span>4.5</span>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <!-- MAPA EM TEMPO REAL COM PAINEL LIQUID GLASS EXPANDIDO -->
+        <div class="map-banner">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14144.577741369527!2d-48.5528876!3d-27.5890835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273822839b2b51%3A0x6b43729352ef25bc!2sAv.%20Beira%20Mar%20Norte%20-%20Florian%C3%B3polis%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            class="realtime-map"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- BALÃO VERDE EXPANDIDO FOSCO EM LIQUID GLASS -->
+          <div class="map-banner-content">
+            <h3 id="locationTitle">Florianópolis, Santa Catarina</h3>
+            <p id="locationAddress">Avenida Beira-Mar Norte</p>
+          </div>
+        </div>
+
+        <!-- CARACTERÍSTICAS -->
+        <div class="specs-grid">
+          <div class="spec-item"><i class="fa-solid fa-vector-square"></i> 70m²</div>
+          <div class="spec-item"><i class="fa-solid fa-bed"></i> 3 camas</div>
+          <div class="spec-item"><i class="fa-solid fa-bath"></i> 2 banheiros</div>
+          <div class="spec-item"><i class="fa-solid fa-car"></i> 2 vagas</div>
+          <div class="spec-item"><i class="fa-solid fa-building"></i> 10º andar</div>
+          <div class="spec-item"><i class="fa-solid fa-paw"></i> Aceita pets</div>
+          <div class="spec-item"><i class="fa-solid fa-couch"></i> Mobiliado</div>
+          <div class="spec-item"><i class="fa-solid fa-train-subway"></i> Próx. ao Metrô</div>
+        </div>
+
+        <!-- DESCRIÇÃO -->
+        <div class="description-section">
+          <h3>Descrição</h3>
+          <p>O prédio possui regras de convivência, favor checar com o síndico. O restante das informações serão fornecidas no contrato de locação.</p>
+        </div>
+
+      </div>
+
+      <!-- CARD DE PREÇOS COM LIQUID GLASS -->
+      <div class="pricing-card glass-card">
+
+        <div>
+          <h3 class="pricing-title">Valores agregados:</h3>
+
+          <div class="pricing-list">
+            <div class="pricing-row"><span>Aluguel</span><span>R$ 4.500,00</span></div>
+            <div class="pricing-row"><span>Condomínio</span><span>R$ 1.100,00</span></div>
+            <div class="pricing-row"><span>IPTU</span><span>R$ 350,00</span></div>
+            <div class="pricing-row"><span>Seguro Incêndio</span><span>R$ 150,00</span></div>
+            <div class="pricing-row"><span>Taxa de serviço</span><span>R$ 100,00</span></div>
+          </div>
+
+          <div class="pricing-divider"></div>
+
+          <div class="total-row">
+            <span class="total-label">Total</span>
+            <div class="total-amount">
+              R$ <strong>6.200</strong> <small>/ Mês</small>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-whatsapp" id="openChatBtn">
+          <span>Conversar agora</span>
+          <div class="whatsapp-icon-circle">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </button>
+
+        <div class="host-bar">
+          <!-- ANFITRIÃO COM ÍCONE DE PERFIL SEM FOTO -->
+          <div class="host-pill glass-element">
+            <div class="host-avatar-placeholder">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <span>Anfitrião: <strong>Roger Silva</strong></span>
+          </div>
+
+          <div class="action-icons">
+            <button class="action-btn glass-btn" id="commentsBtn" title="Comentários">
+              <i class="fa-regular fa-comment"></i>
+            </button>
+
+            <button class="action-btn glass-btn" id="favoriteBtn" title="Favoritar">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <div class="share-wrapper">
+              <button class="action-btn glass-btn" id="shareBtn" title="Compartilhar">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+             
+              <!-- MENU DROPDOWN DE COMPARTILHAMENTO -->
+              <div class="share-dropdown glass-card" id="shareDropdown">
+                <button type="button" class="share-option" id="copyLinkOption">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copiar Link</span>
+                </button>
+                <button type="button" class="share-option" id="whatsappOption">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>Enviar no WhatsApp</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- SUGESTÕES -->
+    <section class="suggestions-section">
+      <h3 class="suggestions-title">Você também pode gostar de...</h3>
+
+      <div class="suggestions-grid">
+
+        <div class="rec-card" onclick="selectProperty('Loft Elegante', '65m²', 'Curitiba, Paraná', 'Centro Cívico')">
+          <img src="ap7.avif" alt="Loft Elegante">
+          <div class="rec-card-info glass-element">
+            <h4>Loft Elegante</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Curitiba, Paraná</p>
+          </div>
+        </div>
+
+        <div class="rec-card" onclick="selectProperty('Studio Moderno', '45m²', 'Uberlândia, Minas Gerais', 'Bairro Fundinho')">
+          <img src="ap8.avif" alt="Studio Moderno">
+          <div class="rec-card-info glass-element">
+            <h4>Studio Moderno</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Uberlândia, Minas Gerais</p>
+          </div>
+        </div>
+
+        <div class="rec-card" onclick="selectProperty('Apartamento bem localizado', '82m²', 'Jundiaí, São Paulo', 'Anhangabaú')">
+          <img src="ap9.avif" alt="Apartamento bem localizado">
+          <div class="rec-card-info glass-element">
+            <h4>Apartamento bem localizado</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Jundiaí, São Paulo</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- MODAL DE CHAT INTERATIVO COM LIQUID GLASS -->
+  <div class="chat-modal-overlay" id="chatModal">
+    <div class="chat-box glass-card">
+
+      <div class="chat-header">
+        <div class="chat-user-info">
+          <div class="chat-avatar-placeholder-modal">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h4>Roger Silva</h4>
+            <span>Anfitrião • Online</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-chat" id="closeChatBtn">&times;</button>
+      </div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="chat-message received">
+          Olá! Tudo bem? Como posso te ajudar?
+          <span class="chat-time">10:42</span>
+        </div>
+      </div>
+
+      <div class="chat-footer">
+        <input type="text" placeholder="Digite sua mensagem..." id="chatInput" autocomplete="off">
+        <button type="button" id="sendBtn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE COMENTÁRIOS -->
+  <div class="chat-modal-overlay" id="commentsModal">
+    <div class="chat-box glass-card">
+
+      <div class="chat-header">
+        <div class="chat-user-info">
+          <i class="fa-regular fa-comments" style="font-size: 20px;"></i>
+          <div>
+            <h4>Avaliações e Comentários</h4>
+            <span>3 opiniões de inquilinos</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-chat" id="closeCommentsBtn">&times;</button>
+      </div>
+
+      <div class="chat-body" id="commentsBody">
+        <div class="comment-item">
+          <div class="comment-user">
+            <div class="user-avatar-small"><i class="fa-solid fa-user"></i></div>
+            <strong>Fernanda M.</strong>
+            <span class="stars"><i class="fa-solid fa-star"></i> 5.0</span>
+          </div>
+          <p class="comment-text">O imóvel é extremamente aconchegante e bem localizado!</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-user">
+            <div class="user-avatar-small"><i class="fa-solid fa-user"></i></div>
+            <strong>Carlos Eduardo</strong>
+            <span class="stars"><i class="fa-solid fa-star"></i> 4.5</span>
+          </div>
+          <p class="comment-text">Excelente recepção do anfitrião Roger. Recomendo muito.</p>
+        </div>
+      </div>
+
+      <div class="chat-footer">
+        <input type="text" placeholder="Escreva seu comentário..." id="commentInput" autocomplete="off">
+        <button type="button" id="sendCommentBtn">
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOTIFICAÇÃO TOAST (Link Copiado) -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check"></i> Link copiado para a área de transferência!
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // MODAL CHAT
+      const chatModal = document.getElementById('chatModal');
+      const openChatBtn = document.getElementById('openChatBtn');
+      const closeChatBtn = document.getElementById('closeChatBtn');
+      const chatInput = document.getElementById('chatInput');
+      const sendBtn = document.getElementById('sendBtn');
+      const chatBody = document.getElementById('chatBody');
+
+      openChatBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        chatModal.classList.add('active');
+        chatInput.focus();
+      });
+
+      closeChatBtn.addEventListener('click', () => {
+        chatModal.classList.remove('active');
+      });
+
+      chatModal.addEventListener('click', (e) => {
+        if (e.target === chatModal) chatModal.classList.remove('active');
+      });
+
+      function sendMessage() {
+        const text = chatInput.value.trim();
+        if (text !== "") {
+          const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+          const msgDiv = document.createElement('div');
+          msgDiv.className = 'chat-message sent';
+          msgDiv.innerHTML = `${text}<span class="chat-time">${time}</span>`;
+          chatBody.appendChild(msgDiv);
+          chatInput.value = "";
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+      }
+
+      sendBtn.addEventListener('click', sendMessage);
+      chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      // FUNCIONALIDADE CORAÇÃO (FAVORITAR)
+      const favoriteBtn = document.getElementById('favoriteBtn');
+      favoriteBtn.addEventListener('click', () => {
+        favoriteBtn.classList.toggle('active');
+        const icon = favoriteBtn.querySelector('i');
+        if (favoriteBtn.classList.contains('active')) {
+          icon.className = 'fa-solid fa-heart';
+        } else {
+          icon.className = 'fa-regular fa-heart';
+        }
+      });
+
+      // FUNCIONALIDADE COMPARTILHAR
+      const shareBtn = document.getElementById('shareBtn');
+      const shareDropdown = document.getElementById('shareDropdown');
+      const copyLinkOption = document.getElementById('copyLinkOption');
+      const whatsappOption = document.getElementById('whatsappOption');
+      const toast = document.getElementById('toast');
+
+      shareBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        shareDropdown.classList.toggle('active');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!shareDropdown.contains(e.target) && e.target !== shareBtn) {
+          shareDropdown.classList.remove('active');
+        }
+      });
+
+      copyLinkOption.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href);
+        shareDropdown.classList.remove('active');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+      });
+
+      whatsappOption.addEventListener('click', () => {
+        const text = encodeURIComponent(`Confira este imóvel incrível no Roomatch: ${window.location.href}`);
+        window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        shareDropdown.classList.remove('active');
+      });
+
+      // MODAL DE COMENTÁRIOS
+      const commentsBtn = document.getElementById('commentsBtn');
+      const commentsModal = document.getElementById('commentsModal');
+      const closeCommentsBtn = document.getElementById('closeCommentsBtn');
+      const commentInput = document.getElementById('commentInput');
+      const sendCommentBtn = document.getElementById('sendCommentBtn');
+      const commentsBody = document.getElementById('commentsBody');
+
+      commentsBtn.addEventListener('click', () => {
+        commentsModal.classList.add('active');
+      });
+
+      closeCommentsBtn.addEventListener('click', () => {
+        commentsModal.classList.remove('active');
+      });
+
+      commentsModal.addEventListener('click', (e) => {
+        if (e.target === commentsModal) commentsModal.classList.remove('active');
+      });
+
+      sendCommentBtn.addEventListener('click', () => {
+        const text = commentInput.value.trim();
+        if (text !== '') {
+          const commentDiv = document.createElement('div');
+          commentDiv.className = 'comment-item';
+          commentDiv.innerHTML = `
+            <div class="comment-user">
+              <div class="user-avatar-small"><i class="fa-solid fa-user"></i></div>
+              <strong>Você</strong>
+              <span class="stars"><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <p class="comment-text">${text}</p>
+          `;
+          commentsBody.appendChild(commentDiv);
+          commentInput.value = '';
+          commentsBody.scrollTop = commentsBody.scrollHeight;
+        }
+      });
+    });
+
+    // SELEÇÃO DINÂMICA DE SUGESTÕES
+    function selectProperty(title, size, location, address) {
+      document.getElementById('propTitle').innerText = title;
+      document.getElementById('propSubtitle').innerText = size;
+      document.getElementById('locationTitle').innerText = location;
+      document.getElementById('locationAddress').innerText = address;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+
+<!-- ==================== RODAPÉ INSTITUCIONAL (FULL-WIDTH) ==================== -->
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-columns">
+<!-- COLUNA 1: ROOMMATCH -->
+<div class="footer-col">
+<h4>RoomMatch</h4>
+<ul class="footer-links">
+<li><button type="button" data-footer-nav="sobre-page">Site Institucional</button></li>
+<li><button type="button" data-footer-nav="sobre-page">Fale Conosco</button></li>
+<li><button type="button" data-footer-nav="perfil-page">Conta e Segurança</button></li>
+<li><button type="button" data-footer-nav="sobre-page">Carreiras</button></li>
+<li><button type="button" data-footer-nav="imobiliarias-page">Imobiliárias Parceiras</button></li>
+</ul>
+</div>
+<!-- COLUNA 2: DESCUBRA -->
+<div class="footer-col">
+<h4>Descubra</h4>
+<ul class="footer-links">
+<li><button type="button" data-footer-nav="perfil-page">Cadastre seu Imóvel</button></li>
+<li><button type="button" data-footer-nav="home-page">Encontrar Roommate</button></li>
+<li><button type="button" data-footer-nav="home-page">Aluguel e Compra</button></li>
+<li><button type="button" data-footer-nav="sobre-page">Blog RoomMatch</button></li>
+</ul>
+</div>
+<!-- COLUNA 3: SOCIAL -->
+<div class="footer-col">
+<h4>Social</h4>
+<div class="footer-social-icons">
+<button type="button" class="social-circle-link" data-social-modal="instagram" aria-label="Instagram" title="Instagram RoomMatch">
+<i class="fa-brands fa-instagram"></i>
+</button>
+<button type="button" class="social-circle-link" data-social-modal="facebook" aria-label="Facebook" title="Facebook RoomMatch">
+<i class="fa-brands fa-facebook-f"></i>
+</button>
+<button type="button" class="social-circle-link" data-social-modal="linkedin" aria-label="LinkedIn" title="LinkedIn RoomMatch">
+<i class="fa-brands fa-linkedin-in"></i>
+</button>
+<button type="button" class="social-circle-link" data-social-modal="youtube" aria-label="YouTube" title="YouTube RoomMatch">
+<i class="fa-brands fa-youtube"></i>
+</button>
+</div>
+</div>
+</div>
+<hr class="footer-divider">
+<div class="footer-bottom">
+<div class="footer-legal-info">
+<img src="roommatchlogo.png" alt="RoomMatch" class="footer-mini-logo">
+<p>
+&copy; Copyright 2026 - RoomMatch - Todos os direitos reservados RoomMatch Plataforma Imobiliária S.A.<br>
+CNPJ 48.912.340/0001-75 / Av. Paulista, nº 1374, Bela Vista, São Paulo/SP - CEP 01310-100
+</p>
+</div>
+<div class="footer-policy-links">
+<a href="#termos" data-footer-nav="sobre-page">Termos e condições de uso</a>
+<a href="#conduta" data-footer-nav="sobre-page">Código de conduta</a>
+<a href="#privacidade" data-footer-nav="sobre-page">Privacidade</a>
+<a href="#seguranca" data-footer-nav="sobre-page">Dicas de segurança</a>
+</div>
+</div>
+</div>
+</footer>
+</html>

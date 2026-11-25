@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Franciosi Imóveis - Itapetininga</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #edf3f9 0%, #f5f7f9 55%, #f9f8f5 100%);
+            color: #2c384a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CONTAINER CENTRAL */
+        .about-wrapper {
+            width: 100%;
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 5rem;
+            flex: 1;
+        }
+
+        /* BARRA SUPERIOR (VOLTAR + TAG INSTITUCIONAL) */
+        .top-nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.75rem;
+            gap: 1rem;
+            animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .pill-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.65rem 1.3rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid #dce6f2;
+            border-top: 1.5px solid #ffffff;
+            color: #335478;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+            transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .pill-nav-btn:hover {
+            background: #dce8f5;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(126, 163, 201, 0.18);
+        }
+
+        .pill-nav-btn i {
+            transition: transform 0.25s ease;
+        }
+
+        .pill-nav-btn:hover i {
+            transform: translateX(-3px);
+        }
+
+        .pill-tag-right {
+            padding: 0.65rem 1.3rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #dce6f2;
+            border-top: 1.5px solid #ffffff;
+            color: #4a6b8c;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+        }
+
+        /* CARTÕES EM LIQUID GLASS CLARO */
+        .glass-panel {
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.92) 0%,
+                rgba(247, 250, 253, 0.82) 100%
+            );
+            backdrop-filter: blur(18px) saturate(150%);
+            -webkit-backdrop-filter: blur(18px) saturate(150%);
+            border: 1px solid rgba(214, 227, 242, 0.85);
+            border-top: 1.5px solid #ffffff;
+            border-left: 1.5px solid #ffffff;
+            border-radius: 1.75rem;
+            box-shadow:
+                0 14px 34px rgba(15, 23, 42, 0.045),
+                inset 0 1px 1px rgba(255, 255, 255, 0.9);
+        }
+
+        /* 1. BLOCO HERO PRINCIPAL */
+        .hero-about-card {
+            padding: 3rem 2.75rem 2.75rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+        }
+
+        .hero-about-logo {
+            width: 54px;
+            height: 54px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            padding: 10px;
+            background: linear-gradient(135deg, #dce8f5 0%, #eef4fb 100%);
+            border: 1px solid #c6daf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(126, 163, 201, 0.18);
+        }
+
+        .hero-about-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .small-pill-badge {
+            display: inline-block;
+            padding: 0.4rem 1.1rem;
+            border-radius: 9999px;
+            background-color: #e6eff9;
+            border: 1px solid #c9dcf0;
+            color: #3b638e;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.24;
+            color: #1e293b;
+            max-width: 720px;
+            margin: 0 auto 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+        }
+
+        .about-description {
+            font-size: 0.96rem;
+            line-height: 1.65;
+            color: #526277;
+            max-width: 700px;
+            margin: 0 auto 2.25rem;
+        }
+
+        .about-description strong {
+            color: #2b4868;
+            font-weight: 700;
+        }
+
+        /* 4 CAIXAS DE ESTATÍSTICAS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-box {
+            background-color: #ffffff;
+            border: 1px solid #e3ecf5;
+            border-radius: 1.15rem;
+            padding: 1.25rem 0.85rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.025);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-4px);
+            border-color: #aec8e4;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #46729f;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* 2. GRID MISSÃO, VISÃO E VALORES (3 COLUNAS) */
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+        }
+
+        .mvv-card {
+            padding: 2rem 1.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mvv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 34px rgba(126, 163, 201, 0.14);
+        }
+
+        .icon-square {
+            width: 44px;
+            height: 44px;
+            border-radius: 0.9rem;
+            background: linear-gradient(135deg, #dce8f5 0%, #c8dcf0 100%);
+            border: 1px solid #b5cfe9;
+            color: #335478;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .mvv-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.02em;
+        }
+
+        .mvv-text {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #5a6a7e;
+        }
+
+        /* 3. GRID INFERIOR (2 COLUNAS: POR QUE ESCOLHER + CONTATO) */
+        .bottom-split-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 1.5rem;
+            animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+        }
+
+        .split-card {
+            padding: 2.15rem 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .split-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-transform: uppercase;
+            margin-bottom: 1.35rem;
+            letter-spacing: 0.02em;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.95rem;
+            padding: 1rem 1.15rem;
+            border-radius: 1.1rem;
+            background-color: #ffffff;
+            border: 1px solid #e4edf6;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(4px);
+            border-color: #b4cde8;
+        }
+
+        .feature-item-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 0.75rem;
+            background-color: #e6eff9;
+            color: #46729f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .feature-item h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item p {
+            font-size: 0.81rem;
+            line-height: 1.5;
+            color: #64748b;
+        }
+
+        /* COLUNA DE CONTATO */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            font-size: 0.86rem;
+            color: #475569;
+        }
+
+        .contact-row-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #e6eff9;
+            border: 1px solid #cde0f3;
+            color: #46729f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.88rem;
+            flex-shrink: 0;
+        }
+
+        .about-social-row {
+            display: flex;
+            gap: 0.65rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 1px solid #dce6f2;
+            color: #46729f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+        }
+
+        .about-social-btn:hover {
+            background-color: #dce8f5;
+            border-color: #aec8e4;
+            color: #2b4868;
+            transform: translateY(-2px);
+        }
+
+        .cta-explore-btn {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            width: 100%;
+            padding: 0.9rem 1.5rem;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #6b96c3 0%, #5280b0 100%);
+            border: 1px solid #5280b0;
+            border-top: 1.5px solid rgba(255, 255, 255, 0.55);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            box-shadow: 0 10px 22px rgba(82, 128, 176, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+        }
+
+        .cta-explore-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0 14px 26px rgba(82, 128, 176, 0.34);
+        }
+
+        /* RODAPÉ PADRÃO */
+        .site-footer {
+            background-color: #f4f2ec;
+            border-top: 8px solid #e6e3d8;
+            width: 100%;
+            padding: 3.5rem 3.5rem 2.5rem;
+            color: #555555;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(160px, 240px));
+            gap: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .footer-col ul li a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: #666666;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #3b638e;
+            transform: translateX(4px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-links a {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            border: 1px solid #e2e0d8;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a4a4a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+        }
+
+        .social-links a:hover {
+            border-color: #aec8e4;
+            background-color: #dce8f5;
+            color: #2b4868;
+            transform: translateY(-3px);
+        }
+
+        .footer-divider {
+            border: none;
+            border-top: 1px solid #e6e3d8;
+            margin-bottom: 2rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            max-width: 560px;
+        }
+
+        .copyright-text {
+            font-size: 0.72rem;
+            color: #888888;
+            line-height: 1.5;
+        }
+
+        .footer-policies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-policies a {
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #4a4a4a;
+            transition: color 0.2s ease;
+        }
+
+        .footer-policies a:hover {
+            color: #3b638e;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 900px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-split-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-wrapper {
+                padding: 1.25rem 1rem 3.5rem;
+            }
+
+            .hero-about-card {
+                padding: 2rem 1.25rem;
+            }
+
+            .about-main-title {
+                font-size: 1.65rem;
+            }
+
+            .top-nav-bar {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .pill-nav-btn {
+                justify-content: center;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .site-footer {
+                padding: 2.5rem 1.5rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-wrapper">
+
+        <!-- BARRA SUPERIOR -->
+        <nav class="top-nav-bar">
+            <a href="Franciosi2.html" class="pill-nav-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar para Franciosi Imóveis</span>
+            </a>
+
+            <div class="pill-tag-right">
+                INSTITUCIONAL • SOBRE A FRANCIOSI
+            </div>
+        </nav>
+
+        <!-- CARTÃO PRINCIPAL -->
+        <section class="glass-panel hero-about-card">
+            <div class="hero-about-logo">
+                <img src="FFranciosi sem fundo.png" alt="Logo Franciosi">
+            </div>
+
+            <span class="small-pill-badge">Tradição e confiança em Itapetininga</span>
+
+            <h1 class="about-main-title">
+                MUITO MAIS DO QUE NEGOCIAR IMÓVEIS.<br>
+                É REALIZAR PROJETOS DE VIDA.
+            </h1>
+
+            <p class="about-description">
+                A <strong>Franciosi Imóveis</strong> é referência no mercado imobiliário de Itapetininga e região. Unimos atendimento próximo, curadoria criteriosa de empreendimentos e total segurança jurídica para acompanhar você em cada etapa da compra, venda ou locação do seu imóvel.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">+1.200</span>
+                    <span class="stat-label">Imóveis negociados</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Clientes satisfeitos</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Segurança contratual</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">Itapetininga</span>
+                    <span class="stat-label">Atuação especializada</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSÃO, VISÃO E VALORES -->
+        <section class="mvv-grid">
+            <article class="glass-panel mvv-card">
+                <div class="icon-square">
+                    <i class="fa-solid fa-compass"></i>
+                </div>
+                <h2 class="mvv-title">NOSSA MISSÃO</h2>
+                <p class="mvv-text">
+                    Conectar famílias e investidores às melhores oportunidades imobiliárias de Itapetininga, oferecendo consultoria transparente, ágil e humanizada do primeiro contato à entrega das chaves.
+                </p>
+            </article>
+
+            <article class="glass-panel mvv-card">
+                <div class="icon-square">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <h2 class="mvv-title">NOSSA VISÃO</h2>
+                <p class="mvv-text">
+                    Ser a imobiliária mais admirada e confiável da região, reconhecida pela excelência no atendimento, inovação digital e parceria sólida com grandes construtoras.
+                </p>
+            </article>
+
+            <article class="glass-panel mvv-card">
+                <div class="icon-square">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h2 class="mvv-title">NOSSOS VALORES</h2>
+                <p class="mvv-text">
+                    Ética e transparência em cada negociação, compromisso com a segurança documental, respeito à história de cada cliente e dedicação contínua aos detalhes.
+                </p>
+            </article>
+        </section>
+
+        <!-- POR QUE ESCOLHER + FALE COM A FRANCIOSI -->
+        <section class="bottom-split-grid">
+
+            <div class="glass-panel split-card">
+                <h2 class="split-card-title">POR QUE ESCOLHER A FRANCIOSI?</h2>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-item-icon">
+                            <i class="fa-solid fa-building-circle-check"></i>
+                        </div>
+                        <div>
+                            <h4>Curadoria Exclusiva em Itapetininga</h4>
+                            <p>Portfólio selecionado com os principais lançamentos, apartamentos, casas e terrenos nos melhores bairros da cidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-item-icon">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <div>
+                            <h4>Assessoria Jurídica e Documental Completa</h4>
+                            <p>Acompanhamento rigoroso em toda a análise de documentação, financiamento bancário e assinatura de contrato.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-item-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h4>Atendimento Consultivo Personalizado</h4>
+                            <p>Corretores especialistas prontos para entender o seu momento de vida e encontrar o imóvel ideal sem burocracia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel split-card">
+                <h2 class="split-card-title">FALE COM A FRANCIOSI</h2>
+
+                <div class="contact-list">
+                    <div class="contact-row">
+                        <div class="contact-row-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <span>Itapetininga — Estado de São Paulo</span>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-row-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <span>(015) 3275-9400 • Atendimento Seg a Sáb</span>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-row-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <span>contato@franciosiimoveis.com.br</span>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-row-icon">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <span>Imobiliária Credenciada • Parceria Oficial RoomMatch</span>
+                    </div>
+                </div>
+
+                <div class="about-social-row">
+                    <a href="#" class="about-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="about-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="about-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="about-social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+
+                <a href="Franciosi2.html#imoveis" class="cta-explore-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explorar Imóveis Disponíveis</span>
+                </a>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>RoomMatch</h3>
+                    <ul>
+                        <li><a href="#">Site Institucional</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Conta e Segurança</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Imobiliárias Parceiras</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Descubra</h3>
+                    <ul>
+                        <li><a href="#">Cadastre seu Imóvel</a></li>
+                        <li><a href="#">Encontrar Roommate</a></li>
+                        <li><a href="#">Aluguel e Compra</a></li>
+                        <li><a href="#">Blog RoomMatch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Social</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <div class="footer-brand">
+                        <img src="logo-roommatch.png" alt="RoomMatch" style="height: 36px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
+                    </div>
+                    <p class="copyright-text">
+                        © Copyright 2026 - RoomMatch - Todos os direitos reservados RoomMatch Plataforma Imobiliária S.A.<br>
+                        CNPJ 48.912.340/0001-75 / Av. Paulista, nº 1374, Bela Vista, São Paulo/SP - CEP 01310-100
+                    </p>
+                </div>
+
+                <div class="footer-policies">
+                    <a href="#">Termos e condições de uso</a>
+                    <a href="#">Código de conduta</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Dicas de segurança</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

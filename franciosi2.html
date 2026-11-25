@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,10 +8,8 @@
 
     <link rel="stylesheet" href="style2.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,6 +19,7 @@
 
     <div class="page-container">
         
+        <!-- HERO SECTION -->
         <header class="hero-section">
 
             <img
@@ -39,105 +37,258 @@
                     <span>VOLTAR</span>
                 </a>
 
-                <div class="logo-wrapper">
-                    <img
-                        src="FFranciosi sem fundo.png"
-                        alt="Logo Franciosi"
-                        class="logo-img"
-                    >
-                </div>
+                <!-- LOGO "F" EM CÍRCULO LIQUID GLASS + CONTATO -->
+                <div class="header-right-group">
+                    <a href="sobre_Franciosi.html" class="logo-circle-glass" title="Sobre a Franciosi Imóveis">
+                        <img
+                            src="FFranciosi sem fundo.png"
+                            alt="Logo Franciosi"
+                            class="logo-img"
+                        >
+                    </a>
 
-                <div class="contact-info">
-                    Contato (015) 3275-9400
+                    <a href="tel:01532759400" class="contact-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contato (015) 3275-9400</span>
+                    </a>
                 </div>
 
             </div>
 
             <div class="hero-content">
-
                 <h1 class="hero-title">
                     Sua imobiliária em<br>
                     Itapetininga
                 </h1>
-
-                <p class="hero-subtitle">
-                    Apartamentos | Casas | Terrenos | Coberturas
-                </p>
-
             </div>
 
         </header>
 
+        <!-- BLOQUINHOS EMBAIXO DA IMAGEM -->
+        <div class="categories-wrapper" id="imoveis">
+            <div class="categories-grid">
+                <button type="button" class="category-pill active" data-filter="todos">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Todos</span>
+                </button>
+
+                <button type="button" class="category-pill" data-filter="apartamentos">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Apartamentos</span>
+                </button>
+
+                <button type="button" class="category-pill" data-filter="casas">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Casas</span>
+                </button>
+
+                <button type="button" class="category-pill" data-filter="terrenos">
+                    <i class="fa-solid fa-vector-square"></i>
+                    <span>Terrenos</span>
+                </button>
+
+                <button type="button" class="category-pill" data-filter="coberturas">
+                    <i class="fa-solid fa-city"></i>
+                    <span>Coberturas</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- VITRINE DE IMÓVEIS -->
         <section class="properties-section">
 
-            <h2 class="section-title">
-                Conheça seu próximo imóvel!
-            </h2>
+            <div class="section-header">
+                <h2 class="section-title">
+                    Conheça seu próximo imóvel!
+                </h2>
+                <p class="section-subtitle">
+                    Empreendimentos selecionados nas melhores regiões de Itapetininga
+                </p>
+            </div>
 
-            <div class="properties-grid">
+            <div class="properties-grid" id="propertiesGrid">
 
-                <div class="property-card">
+                <article class="property-card" data-category="apartamentos">
+                    <a href="pagefranciosi.html" class="card-link">
+                        <div class="card-image-box">
+                            <span class="card-tag">Apartamento</span>
+                            <img
+                                src="grand oro 2.png"
+                                alt="Grand Oro"
+                                class="card-img"
+                            >
+                        </div>
 
-                    <div class="card-image-box">
-                        <img
-                            src="grand oro 2.png"
-                            alt="Grand Oro"
-                            class="card-img"
-                        >
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <h3 class="card-title">Grand Oro</h3>
+                                <span class="card-arrow">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <p class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Vila Barth, Itapetininga
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="property-card" data-category="apartamentos">
+                    <div class="card-link">
+                        <div class="card-image-box">
+                            <span class="card-tag">Apartamento</span>
+                            <img
+                                src="evo by dkc.png"
+                                alt="Evo by DKC"
+                                class="card-img"
+                            >
+                        </div>
+
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <h3 class="card-title">Evo by DKC</h3>
+                                <span class="card-arrow">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <p class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Centro - Itapetininga
+                            </p>
+                        </div>
                     </div>
+                </article>
 
-                    <div class="card-info">
-                        <h3 class="card-title">Grand Oro</h3>
-                        <p class="card-location">
-                            Vila Barth, Itapetininga
-                        </p>
+                <article class="property-card" data-category="casas">
+                    <div class="card-link">
+                        <div class="card-image-box">
+                            <span class="card-tag">Residencial</span>
+                            <img
+                                src="vila recreio 2.jpg"
+                                alt="Vila Recreio"
+                                class="card-img"
+                            >
+                        </div>
+
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <h3 class="card-title">Vila Recreio</h3>
+                                <span class="card-arrow">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <p class="card-location">
+                                <i class="fa-solid fa-location-dot"></i> Vila Recreio - Itapetininga
+                            </p>
+                        </div>
                     </div>
+                </article>
 
-                </div>
+            </div>
 
-                <div class="property-card">
-
-                    <div class="card-image-box">
-                        <img
-                            src="evo by dkc.png"
-                            alt="Evo by DKC"
-                            class="card-img"
-                        >
-                    </div>
-
-                    <div class="card-info">
-                        <h3 class="card-title">Evo by DKC</h3>
-                        <p class="card-location">
-                            Centro - Itapetininga
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="property-card">
-
-                    <div class="card-image-box">
-                        <img
-                            src="vila recreio 2.jpg"
-                            alt="Vila Recreio"
-                            class="card-img"
-                        >
-                    </div>
-
-                    <div class="card-info">
-                        <h3 class="card-title">Vila Recreio</h3>
-                        <p class="card-location">
-                            Vila Recreio - Itapetininga
-                        </p>
-                    </div>
-
-                </div>
-
+            <div class="empty-filter-message" id="emptyMessage" style="display: none;">
+                <i class="fa-regular fa-building"></i>
+                <p>Novas opções nesta categoria serão publicadas em breve.</p>
+                <button type="button" class="reset-filter-btn" id="resetFilterBtn">Mostrar todos os imóveis</button>
             </div>
 
         </section>
 
+        <!-- RODAPÉ -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-col">
+                        <h3>RoomMatch</h3>
+                        <ul>
+                            <li><a href="#">Site Institucional</a></li>
+                            <li><a href="#">Fale Conosco</a></li>
+                            <li><a href="#">Conta e Segurança</a></li>
+                            <li><a href="#">Carreiras</a></li>
+                            <li><a href="#">Imobiliárias Parceiras</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Descubra</h3>
+                        <ul>
+                            <li><a href="#">Cadastre seu Imóvel</a></li>
+                            <li><a href="#">Encontrar Roommate</a></li>
+                            <li><a href="#">Aluguel e Compra</a></li>
+                            <li><a href="#">Blog RoomMatch</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Social</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <div class="footer-brand">
+                            <img src="logo-roommatch.png" alt="RoomMatch" style="height: 36px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
+                        </div>
+                        <p class="copyright-text">
+                            © Copyright 2026 - RoomMatch - Todos os direitos reservados RoomMatch Plataforma Imobiliária S.A.<br>
+                            CNPJ 48.912.340/0001-75 / Av. Paulista, nº 1374, Bela Vista, São Paulo/SP - CEP 01310-100
+                        </p>
+                    </div>
+
+                    <div class="footer-policies">
+                        <a href="#">Termos e condições de uso</a>
+                        <a href="#">Código de conduta</a>
+                        <a href="#">Privacidade</a>
+                        <a href="#">Dicas de segurança</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pills = document.querySelectorAll('.category-pill');
+            const cards = document.querySelectorAll('.property-card');
+            const emptyMessage = document.getElementById('emptyMessage');
+            const resetBtn = document.getElementById('resetFilterBtn');
+
+            function filterProperties(category) {
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const cardCat = card.getAttribute('data-category');
+                    if (category === 'todos' || cardCat === category) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'none';
+                        card.offsetHeight;
+                        card.style.animation = 'fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                emptyMessage.style.display = visibleCount === 0 ? 'flex' : 'none';
+            }
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    filterProperties(pill.getAttribute('data-filter'));
+                });
+            });
+
+            resetBtn.addEventListener('click', () => {
+                pills.forEach(p => p.classList.remove('active'));
+                pills[0].classList.add('active');
+                filterProperties('todos');
+            });
+        });
+    </script>
 
 </body>
 </html>
